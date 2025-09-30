@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Semijoias Premium</title>
+    <!-- Carregamento do Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração de classes personalizadas Tailwind para um visual sofisticado -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-gold': '#6ab8aa', /* Ouro sutil */
+                        'secondary-bg': '#F8F8F8', /* Fundo claro e elegante */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo personalizado para os itens de navegação */
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            font-weight: 600; /* semi-bold */
+            color: #555; /* gray-600 */
+            transition: color 0.3s, border-bottom 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        /* Efeito hover para o menu */
+        .nav-item:hover, .nav-item.active {
+            color: #6ab8aa; /* primary-gold */
+            border-bottom-color: #6ab8aa;
+            /* border-bottom-color: #A47E3B; */
+        }
+
+        /* Estilo para garantir que o conteúdo não fique escondido sob o menu fixo ao usar âncoras */
+        section {
+            scroll-margin-top: 6rem; /* Altura do cabeçalho e menu */
+        }
+    </style>
+    <!-- Ícones Lucide para aprimorar o visual -->
+    <script type="module">
+        import lucide from 'https://unpkg.com/lucide@latest/dist/umd/lucide.js';
+        lucide.createIcons();
+    </script>
+</head>
+
+<!-- Fundo suave e elegante para todo o catálogo -->
+<body class="bg-secondary-bg text-gray-800 font-sans">
+
+    <!-- Cabeçalho Principal -->
+    <header class="bg-white shadow-md py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold text-primary-gold tracking-wider">
+                HEVELYN SEMIJOIAS
+            </h1>
+            <p class="mt-2 text-xl text-gray-600">Joias que celebram a sua beleza única.</p>
+        </div>
+    </header>
+
+    <!-- Menu de Navegação Fixo (Sticky) -->
+    <nav class="bg-white shadow-lg sticky top-0 z-20 mb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center space-x-4 sm:space-x-8 h-16">
+                <!-- Links de Categoria. As classes 'active' serão aplicadas via JS se o carrossel estivesse presente. Mantendo o estilo de hover/ativo -->
+                <a href="anel.html" class="nav-item">Anéis</a>
+                <a href="index.html" class="nav-item">Brincos</a>
+                <a href="corrente.html" class="nav-item">Correntes e Colares</a>
+                <a href="#pulseira" class="nav-item">Pulseiras</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção de Produtos (Grid Responsivo) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        
+        <!-- O grid se ajusta: 1 coluna no celular, 2 no tablet, 3 no desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- EXEMPLO DE PRODUTO 1: Anel Solitário Ouro -->
+            <div class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
+                <img src="static/img/corrente/letras.png" alt="LETRAS-128" class="w-full h-64 object-cover">
+                
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Pinjente</h3>
+                    <p class="text-sm text-gray-500 mb-4">Ref: LETRAS-128</p>
+                    
+                    <p class="text-gray-600 h-16 overflow-hidden mb-4">
+                       Iniciais com brilho intenso. Monte seu nome.
+                    </p>
+
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-3xl font-bold text-primary-gold">R$ 88,00</span>
+                    </div>
+
+                    <!-- Botão WhatsApp com link dinâmico (Substitua o número) -->
+                    <button 
+                        onclick="abrirWhatsApp('Letras cravejada com zircônias', 'LETRAS-128')"
+                        class="w-full flex items-center justify-center bg-primary-gold text-white py-3 rounded-full font-semibold uppercase tracking-wider shadow-md hover:bg-amber-600 transition duration-300">
+                        <i data-lucide="message-square-text" class="w-5 h-5 mr-2"></i>
+                        Tenho Interesse
+                    </button>
+                </div>
+            </div>  
+            
+            <div class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
+                <img src="static/img/corrente/Corrente_prata.png" alt="CORRENTE-PRATA-128" class="w-full h-64 object-cover">
+                
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2"> Corrente + Letra</h3>
+                    <p class="text-sm text-gray-500 mb-4">Ref: LETRAS-128</p>
+                    
+                    <p class="text-gray-600 h-16 overflow-hidden mb-4">
+                       Seu nome, seu estilo. Corrente + letra cravejada.
+                    </p>
+
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-3xl font-bold text-primary-gold">R$ 128,00</span>
+                    </div>
+
+                    <!-- Botão WhatsApp com link dinâmico (Substitua o número) -->
+                    <button 
+                        onclick="abrirWhatsApp('Letras cravejada com zircônias', 'LETRAS-128')"
+                        class="w-full flex items-center justify-center bg-primary-gold text-white py-3 rounded-full font-semibold uppercase tracking-wider shadow-md hover:bg-amber-600 transition duration-300">
+                        <i data-lucide="message-square-text" class="w-5 h-5 mr-2"></i>
+                        Tenho Interesse
+                    </button>
+                </div>
+            </div>  
+            
+            <div class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
+                <img src="static/img/corrente/Corrente_banhado.png" alt="CORRENTE-PRATA-128" class="w-full h-64 object-cover">
+                
+                <div class="p-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2"> Corrente + Letra</h3>
+                    <p class="text-sm text-gray-500 mb-4">Ref: LETRAS-128</p>
+                    
+                    <p class="text-gray-600 h-16 overflow-hidden mb-4">
+                       Seu nome, seu estilo. Corrente + letra cravejada.
+                    </p>
+
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-3xl font-bold text-primary-gold">R$ 128,00</span>
+                    </div>
+
+                    <!-- Botão WhatsApp com link dinâmico (Substitua o número) -->
+                    <button 
+                        onclick="abrirWhatsApp('Letras cravejada com zircônias', 'LETRAS-128')"
+                        class="w-full flex items-center justify-center bg-primary-gold text-white py-3 rounded-full font-semibold uppercase tracking-wider shadow-md hover:bg-amber-600 transition duration-300">
+                        <i data-lucide="message-square-text" class="w-5 h-5 mr-2"></i>
+                        Tenho Interesse
+                    </button>
+                </div>
+            </div> 
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-100 py-6 mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            © 2025 [Nome da Sua Loja]. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Script JavaScript para abrir o WhatsApp -->
+    <script>
+        function abrirWhatsApp(nomeProduto, referencia) {
+            // Substitua '5511999999999' pelo seu número de telefone com código do país e DDD
+            const numeroTelefone = '5511971498691'; 
+            
+            // Mensagem preenchida: codifica o texto para o formato URL
+            const mensagem = encodeURIComponent(
+                `Olá, tenho interesse na "${nomeProduto}" (Ref: ${referencia}). Gostaria de mais detalhes e informações sobre como comprar.`
+            );
+
+            const url = `https://wa.me/${numeroTelefone}?text=${mensagem}`;
+            
+            // Abre o link em uma nova aba
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
