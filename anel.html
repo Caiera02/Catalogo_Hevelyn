@@ -191,27 +191,11 @@
     <!-- Rodapé -->
     <footer class="bg-gray-100 py-6 mt-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            © 2025 [Nome da Sua Loja]. Todos os direitos reservados.
+           © 2025 Hevelyn. Todos os direitos reservados.
         </div>
     </footer>
 
-    <!-- Script JavaScript para abrir o WhatsApp -->
-    <script>
-        function abrirWhatsApp(nomeProduto, referencia) {
-            // Substitua '5511999999999' pelo seu número de telefone com código do país e DDD
-            const numeroTelefone = '5511971498691'; 
-            
-            // Mensagem preenchida: codifica o texto para o formato URL
-            const mensagem = encodeURIComponent(
-                `Olá, tenho interesse na "${nomeProduto}" (Ref: ${referencia}). Gostaria de mais detalhes e informações sobre como comprar.`
-            );
-
-            const url = `https://wa.me/${numeroTelefone}?text=${mensagem}`;
-            
-            // Abre o link em uma nova aba
-            window.open(url, '_blank');
-        }
-    </script>
+    <script src="static/js/whatsapp.js"></script>
 
 </body>
 </html>

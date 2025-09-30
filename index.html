@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,21 +29,27 @@
             display: flex;
             align-items: center;
             padding: 0 1rem;
-            font-weight: 600; /* semi-bold */
-            color: #555; /* gray-600 */
+            font-weight: 600;
+            /* semi-bold */
+            color: #555;
+            /* gray-600 */
             transition: color 0.3s, border-bottom 0.3s;
             border-bottom: 3px solid transparent;
         }
+
         /* Efeito hover para o menu */
-        .nav-item:hover, .nav-item.active {
-            color: #6ab8aa; /* primary-gold */
+        .nav-item:hover,
+        .nav-item.active {
+            color: #6ab8aa;
+            /* primary-gold */
             border-bottom-color: #6ab8aa;
             /* border-bottom-color: #A47E3B; */
         }
 
         /* Estilo para garantir que o conteúdo não fique escondido sob o menu fixo ao usar âncoras */
         section {
-            scroll-margin-top: 6rem; /* Altura do cabeçalho e menu */
+            scroll-margin-top: 6rem;
+            /* Altura do cabeçalho e menu */
         }
     </style>
     <!-- Ícones Lucide para aprimorar o visual -->
@@ -53,6 +60,7 @@
 </head>
 
 <!-- Fundo suave e elegante para todo o catálogo -->
+
 <body class="bg-secondary-bg text-gray-800 font-sans">
 
     <!-- Cabeçalho Principal -->
@@ -80,20 +88,22 @@
 
     <!-- Seção de Produtos (Grid Responsivo) -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        
+
         <!-- O grid se ajusta: 1 coluna no celular, 2 no tablet, 3 no desktop -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <!-- EXEMPLO DE PRODUTO 1: Anel Solitário Ouro -->
-            <div class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
+            <div
+                class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
                 <img src="static/img/brincos/Brinco 148.png" alt="brinco-$148" class="w-full h-64 object-cover">
-                
+
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Brinco Cleopatra</h3>
                     <p class="text-sm text-gray-500 mb-4">Ref: BRN-148</p>
-                    
+
                     <p class="text-gray-600 h-16 overflow-hidden mb-4">
-                       Seu toque de cor e brilho! Meia argola cravejada com zircônias em tons vibrantes. Perfeita para um look moderno e divertido.
+                        Seu toque de cor e brilho! Meia argola cravejada com zircônias em tons vibrantes. Perfeita para
+                        um look moderno e divertido.
                     </p>
 
                     <div class="flex justify-between items-center mb-6">
@@ -101,8 +111,7 @@
                     </div>
 
                     <!-- Botão WhatsApp com link dinâmico (Substitua o número) -->
-                    <button 
-                        onclick="abrirWhatsApp('Anel Solitário Luxo', 'BRN-148')"
+                    <button onclick="abrirWhatsApp('Anel Solitário Luxo', 'BRN-148')"
                         class="w-full flex items-center justify-center bg-primary-gold text-white py-3 rounded-full font-semibold uppercase tracking-wider shadow-md hover:bg-amber-600 transition duration-300">
                         <i data-lucide="message-square-text" class="w-5 h-5 mr-2"></i>
                         Tenho Interesse
@@ -111,23 +120,24 @@
             </div>
 
             <!-- EXEMPLO DE PRODUTO 2: Brinco Gota Ródio -->
-            <div class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
+            <div
+                class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
                 <img src="static/img/brincos/Brinco 98.png" alt="Brinco Gota em Ródio" class="w-full h-64 object-cover">
-                
+
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Brinco Pêndulo Glamour</h3>
                     <p class="text-sm text-gray-500 mb-4">Ref: BRN-098</p>
 
                     <p class="text-gray-600 h-16 overflow-hidden mb-4">
-                        Movimento e elegância garantidos! Brinco longo em cascata com um ponto de luz em zircônia. Ideal para festas e para alongar o rosto.
+                        Movimento e elegância garantidos! Brinco longo em cascata com um ponto de luz em zircônia. Ideal
+                        para festas e para alongar o rosto.
                     </p>
 
                     <div class="flex justify-between items-center mb-6">
                         <span class="text-3xl font-bold text-primary-gold">R$ 98,00</span>
                     </div>
 
-                    <button 
-                        onclick="abrirWhatsApp('Brinco Pêndulo Glamour', 'BRN-098')"
+                    <button onclick="abrirWhatsApp('Brinco Pêndulo Glamour', 'BRN-098')"
                         class="w-full flex items-center justify-center bg-primary-gold text-white py-3 rounded-full font-semibold uppercase tracking-wider shadow-md hover:bg-amber-600 transition duration-300">
                         <i data-lucide="message-square-text" class="w-5 h-5 mr-2"></i>
                         Tenho Interesse
@@ -136,50 +146,53 @@
             </div>
 
             <!-- EXEMPLO DE PRODUTO 3: Colar Elos Grandes -->
-            <div class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
+            <div
+                class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
                 <img src="static/img/brincos/4.png" alt="Colar de Elos Grandes" class="w-full h-64 object-cover">
-                
+
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Brinco Coração Melt</h3>
                     <p class="text-sm text-gray-500 mb-4">Ref: BRN-000</p>
 
                     <p class="text-gray-600 h-16 overflow-hidden mb-4">
-                        Amor em forma de joia! Coração vazado com um toque orgânico e zircônia rubi central. Delicado, romântico e cheio de estilo.
+                        Amor em forma de joia! Coração vazado com um toque orgânico e zircônia rubi central. Delicado,
+                        romântico e cheio de estilo.
                     </p>
 
                     <div class="flex justify-between items-center mb-6">
                         <span class="text-3xl font-bold text-primary-gold">Consultar</span>
                     </div>
 
-                    <button 
-                        onclick="abrirWhatsApp('Brinco Coração Melt', 'BRN-000')"
+                    <button onclick="abrirWhatsApp('Brinco Coração Melt', 'BRN-000')"
                         class="w-full flex items-center justify-center bg-primary-gold text-white py-3 rounded-full font-semibold uppercase tracking-wider shadow-md hover:bg-amber-600 transition duration-300">
                         <i data-lucide="message-square-text" class="w-5 h-5 mr-2"></i>
                         Tenho Interesse
                     </button>
                 </div>
             </div>
-            
+
             <!-- (Você pode adicionar mais produtos aqui, seguindo o mesmo padrão de div.product-card) -->
-            
+
             <!-- EXEMPLO DE PRODUTO 4: Pulseira com Pingentes -->
-            <div class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
-                <img src="static/img/brincos/BRINCO 118 (2).png" alt="Pulseira Charmosa" class="w-full h-64 object-cover">
-                
+            <div
+                class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
+                <img src="static/img/brincos/BRINCO 118 (2).png" alt="Pulseira Charmosa"
+                    class="w-full h-64 object-cover">
+
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Brinco Stud Quadrado Minimalista</h3>
                     <p class="text-sm text-gray-500 mb-4">Ref: BRN-118</p>
 
                     <p class="text-gray-600 h-16 overflow-hidden mb-4">
-                        O charme da simplicidade. Brinco quadrado com pedra em tom opaco e borda dourada. O detalhe minimalista que faltava no seu dia a dia.
+                        O charme da simplicidade. Brinco quadrado com pedra em tom opaco e borda dourada. O detalhe
+                        minimalista que faltava no seu dia a dia.
                     </p>
 
                     <div class="flex justify-between items-center mb-6">
                         <span class="text-3xl font-bold text-primary-gold">R$ 118,00</span>
                     </div>
 
-                    <button 
-                        onclick="abrirWhatsApp('Brinco Stud Quadrado Minimalista', 'BRN-118-007')"
+                    <button onclick="abrirWhatsApp('Brinco Stud Quadrado Minimalista', 'BRN-118-007')"
                         class="w-full flex items-center justify-center bg-primary-gold text-white py-3 rounded-full font-semibold uppercase tracking-wider shadow-md hover:bg-amber-600 transition duration-300">
                         <i data-lucide="message-square-text" class="w-5 h-5 mr-2"></i>
                         Tenho Interesse
@@ -187,24 +200,25 @@
                 </div>
             </div>
 
-            <!-- EXEMPLO DE PRODUTO 5: Anel de Falange Prata -->
-            <div class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
+
+            <div
+                class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
                 <img src="static/img/brincos/BRINCO 118.png" alt="BRINCO-118" class="w-full h-64 object-cover">
-                
+
                 <div class="p-6">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-2">Brinco Stud Círculo Essencial</h3>
                     <p class="text-sm text-gray-500 mb-4">Ref: BRN-118</p>
 
                     <p class="text-gray-600 h-16 overflow-hidden mb-4">
-                        Elegância em formas básicas. Brinco redondo clássico com pedra em tom suave. Versátil e perfeito para o segundo furo.
+                        Elegância em formas básicas. Brinco redondo clássico com pedra em tom suave. Versátil e perfeito
+                        para o segundo furo.
                     </p>
 
                     <div class="flex justify-between items-center mb-6">
                         <span class="text-3xl font-bold text-primary-gold">R$ 118,00</span>
                     </div>
 
-                    <button 
-                        onclick="abrirWhatsApp('Brinco Stud Círculo Essencial', 'BRN-118')"
+                    <button onclick="abrirWhatsApp('Brinco Stud Círculo Essencial', 'BRN-118')"
                         class="w-full flex items-center justify-center bg-primary-gold text-white py-3 rounded-full font-semibold uppercase tracking-wider shadow-md hover:bg-amber-600 transition duration-300">
                         <i data-lucide="message-square-text" class="w-5 h-5 mr-2"></i>
                         Tenho Interesse
@@ -212,7 +226,7 @@
                 </div>
             </div>
 
-            <!-- EXEMPLO DE PRODUTO 6: Piercing de Orelha -->
+            <!--             
             <div class="product-card bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-[1.02] overflow-hidden border border-gray-100">
                 <img src="https://placehold.co/800x600/f5d7af/800020?text=Piercing+Orelha" alt="Piercing de Orelha Cravejado" class="w-full h-64 object-cover">
                 
@@ -235,7 +249,7 @@
                         Tenho Interesse
                     </button>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </main>
@@ -243,27 +257,13 @@
     <!-- Rodapé -->
     <footer class="bg-gray-100 py-6 mt-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
-            © 2025 [Nome da Sua Loja]. Todos os direitos reservados.
+            © 2025 Hevelyn. Todos os direitos reservados.
         </div>
     </footer>
 
     <!-- Script JavaScript para abrir o WhatsApp -->
-    <script>
-        function abrirWhatsApp(nomeProduto, referencia) {
-            // Substitua '5511999999999' pelo seu número de telefone com código do país e DDD
-            const numeroTelefone = '5511971498691'; 
-            
-            // Mensagem preenchida: codifica o texto para o formato URL
-            const mensagem = encodeURIComponent(
-                `Olá, tenho interesse na "${nomeProduto}" (Ref: ${referencia}). Gostaria de mais detalhes e informações sobre como comprar.`
-            );
-
-            const url = `https://wa.me/${numeroTelefone}?text=${mensagem}`;
-            
-            // Abre o link em uma nova aba
-            window.open(url, '_blank');
-        }
-    </script>
+    <script src="static/js/whatsapp.js">  </script>
 
 </body>
+
 </html>
